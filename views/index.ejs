@@ -1,0 +1,35 @@
+<html>
+  <% include header.ejs %>
+  <body class="body">
+    <% include nav.ejs %>
+    <h1 class="portal-title">Welcome to student management portal</h1>
+    <table class="table table-hover">
+      <tr class="table-secondary">
+        <th scope="col">Student Name</th>
+        <th scope="col">Student Id</th>
+        <th scope="col">Stream</th>
+        <th scope="col">Action</th>
+      </tr>
+      <% students.forEach(function(item) { %>
+      <tr>
+        <td>
+          <a class="nav-link" href="/student/<%= item.stuId %>"
+            ><%= item.stuName %></a
+          >
+        </td>
+        <td><%= item.stuId %></td>
+        <td><%= item.stream %></td>
+        <td>
+          <a
+            type="submit"
+            class="btn btn-danger"
+            href="/delete/student/<%= item.stuId %>"
+          >
+            DELETE
+          </a>
+        </td>
+      </tr>
+      <% }); %>
+    </table>
+  </body>
+</html>

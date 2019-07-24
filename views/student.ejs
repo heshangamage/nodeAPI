@@ -1,0 +1,45 @@
+<html>
+  <% include header.ejs %>
+  <body class="body">
+    <% include nav.ejs %>
+    <h1>Welcome to profile of <%= student[0].stuName %></h1>
+    <form
+      id="student-form"
+      action="/edit/student/<%= student[0]._id %>"
+      method="POST"
+    >
+      <div class="form-group">
+        <fieldset>
+          <label class="control-label" for="disabledInput">Student Name:</label>
+          <input
+            class="form-control"
+            id="inputDefault"
+            type="text"
+            name="stuName"
+            value="<%= student[0].stuName %>"
+            placeholder="Disabled input here..."
+          />
+          <label class="control-label" for="disabledInput">Student id:</label>
+          <input
+            class="form-control"
+            id="inputDefault"
+            type="text"
+            name="stuId"
+            value="<%= student[0].stuId %>"
+            placeholder="Disabled input here..."
+          />
+          <label class="control-label" for="disabledInput">Stream:</label>
+          <input
+            class="form-control"
+            id="inputDefault"
+            type="text"
+            name="stream"
+            value="<%= student[0].stream %>"
+            placeholder="Disabled input here..."
+          />
+          <button class="btn btn-info" type="submit">EDIT</button>
+        </fieldset>
+      </div>
+    </form>
+  </body>
+</html>

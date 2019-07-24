@@ -1,0 +1,21 @@
+.form-container {
+  border: solid;
+  border-radius: 17px;
+  width: 40%;
+  position: relative;
+  left: 32%;
+  top: 16%;
+}
+
+.add-new-student-title {
+  text-align: center;
+}
+
+.add-student-form {
+  left: 14%;
+  position: relative;
+}
+
+.portal-title {
+  text-align: center;
+}

@@ -1,0 +1,24 @@
+<html>
+    <% include header.ejs %>
+  <body class="body">
+    <% include nav.ejs %>
+    <div class="form-container">
+    <h1 class="add-new-student-title">Insert new student</h1>
+    <form class="add-student-form" id="student-form" action="/success" method="post">
+      <div class="form-group">
+      <label for="stuName">Student name :</label>
+      <input name="stuName" placeholder="Student name.."/></br>
+      </div>
+      <div class="form-group">
+        <label for="stuId">Student id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+      <input name="stuId" placeholder="Student id.." /></br> 
+      </div>
+      <div class="form-group">
+        <label for="stream">Stream &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+        <input name="stream" placeholder="Choose stream" /></br>
+      </div>
+      <button class="btn btn-success" type="submit" class="btn btn-primary">submit</button>
+    </form>
+  </div>
+  </body>
+</html>
